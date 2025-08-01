@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
    
     private void Start()
     {
-        camera_VM.Follow = player.transform.GetChild(0);
+        //camera_VM.Follow = player.transform.GetChild(0);
     }
 
     public static bool GamePaused

@@ -25,12 +25,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8454946152470153898}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.01974076, y: 0.019383753, z: -0.025663158, w: 0.9992877}
-  m_LocalPosition: {x: 0.017125845, y: 3.0055118, z: -0.011246681}
-  m_LocalScale: {x: 100, y: 99.999985, z: 99.99995}
+  m_LocalRotation: {x: 0.000000011175871, y: 0.0000000030267984, z: -0.0000000067884685, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3078406983029697580}
+  m_Father: {fileID: 2624047839811623760}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1528004200339249391
 MonoBehaviour:
@@ -102,7 +102,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1c29a436364bfb0499a65e92312abe52, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -8549953936739135337, guid: 1c29a436364bfb0499a65e92312abe52, type: 3}
       insertIndex: 0
       addedObject: {fileID: 8480751825994254023}
     m_AddedComponents:
@@ -173,12 +173,17 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   playerInput: {fileID: 0}
   playerMovement: {fileID: 0}
+  Animator: {fileID: 0}
   interactionRayLength: 5
   groundMask:
     serializedVersion: 2
     m_Bits: 0
   fly: 0
-  animator: {fileID: 0}
+--- !u!4 &2624047839811623760 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8549953936739135337, guid: 1c29a436364bfb0499a65e92312abe52, type: 3}
+  m_PrefabInstance: {fileID: 3256678306240285639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3078406983029697580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1c29a436364bfb0499a65e92312abe52, type: 3}
