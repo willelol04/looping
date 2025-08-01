@@ -189,3 +189,7 @@ sysinfo.txt
 # End of https://www.toptal.com/developers/gitignore/api/unity,jetbrains
 /looping/Library/Artifacts
 /looping/Library
+/looping/Logs
+/looping/Logs
+/looping/Logs
+/looping/Temp
