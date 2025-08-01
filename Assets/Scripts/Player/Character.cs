@@ -18,15 +18,19 @@ public class Character : MonoBehaviour
     [SerializeField]
     private PlayerMovement playerMovement;
     
+    [SerializeField] 
+    public Animator Animator;
+    private string currentAction;
+    
     private Vector3 flymoving;
     
     public float interactionRayLength = 5;
+    
+    
 
     public LayerMask groundMask;
     
     public bool fly = false;
-    
-    public Animator animator;
     
     bool isWaiting = false;
     
@@ -42,8 +46,6 @@ public class Character : MonoBehaviour
     {
         playerInput.OnMouseClick += HandleMouseClick;
         playerInput.OnFly += HandleFlyClick;
-        
-
     }
     private void HandleFlyClick()
     {
@@ -51,7 +53,6 @@ public class Character : MonoBehaviour
     }
     void Update()
     {
-        playerMovement.HandleGravity(playerInput.IsJumping);
         if (fly)
         {
             playerMovement.Fly(playerInput.MovementInput, playerInput.IsJumping, playerInput.RunningPressed);
@@ -66,6 +67,23 @@ public class Character : MonoBehaviour
             }
             if (playerMovement.IsGrounded)
             {
+                if (playerInput.RunningPressed)
+                {
+                    Animator.Play("RobotArmature|Robot_Running");
+                }
+                else if(playerInput.MovementInput.x > 0 || playerInput.MovementInput.y > 0 || playerInput.MovementInput.z > 0)
+                {
+                    Animator.Play("RobotArmature|Robot_Walking");
+                }
+                else if (playerInput.MovementInput.x < 0 || playerInput.MovementInput.y < 0 ||
+                         playerInput.MovementInput.z < 0)
+                {
+                    Animator.Play("RobotArmature|Robot_Walking_Bakwards");
+                }
+                else
+                {
+                    Animator.Play("RobotArmature|Robot_Idle");
+                }
                 playerMovement.Walk(playerInput.MovementInput, playerInput.RunningPressed);
                 flymoving = playerInput.MovementInput;
             }
@@ -74,7 +92,27 @@ public class Character : MonoBehaviour
                 playerMovement.Walk(flymoving + (playerInput.MovementInput * (float)0.5), playerInput.RunningPressed);
             }
         }
+
+        if (playerInput.IsJumping)
+        {
+            Animator.Play("RobotArmature|Robot_Jump");
+        }
+        playerMovement.HandleGravity(playerInput.IsJumping);
+
         
+    }
+
+    private void PlayAnimation(string animation)
+    {
+        if (animation == currentAction)
+            return;
+
+        if (playerInput.RunningPressed && playerMovement.IsGrounded)
+        {
+            Animator.Play("RobotArmature|Robot_Running");
+        }
+        
+        Animator.Play("RobotArmature|Robot_Jump");
     }
     IEnumerator ResetWaiting()
     {

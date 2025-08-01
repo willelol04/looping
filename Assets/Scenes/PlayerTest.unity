@@ -189,7 +189,7 @@ Transform:
   m_GameObject: {fileID: 181103231}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.58389, y: 8.313655, z: -4.2130346}
+  m_LocalPosition: {x: -1.21, y: 10.01, z: -4.2130346}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -356,7 +356,7 @@ Transform:
   m_GameObject: {fileID: 454537872}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.58389, y: 8.313655, z: -4.2130346}
+  m_LocalPosition: {x: -1.21, y: 10.01, z: -4.2130346}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -676,6 +676,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3460438332715551596, guid: f00c90a098d0ec64d91039cba40d9adf, type: 3}
+      propertyPath: Animator
+      value: 
+      objectReference: {fileID: 7616143529112912610}
+    - target: {fileID: 3460438332715551596, guid: f00c90a098d0ec64d91039cba40d9adf, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 0}
@@ -691,6 +695,10 @@ PrefabInstance:
       propertyPath: groundMask.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 7190647763827682158, guid: f00c90a098d0ec64d91039cba40d9adf, type: 3}
+      propertyPath: Animator
+      value: 
+      objectReference: {fileID: 7616143529112912610}
     - target: {fileID: 7190647763827682158, guid: f00c90a098d0ec64d91039cba40d9adf, type: 3}
       propertyPath: flySpeed
       value: 20
@@ -730,6 +738,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2446407306554996374, guid: f00c90a098d0ec64d91039cba40d9adf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6891992432676877089}
+    - targetCorrespondingSourceObject: {fileID: 2446407306554996374, guid: f00c90a098d0ec64d91039cba40d9adf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7616143529112912610}
   m_SourcePrefab: {fileID: 100100000, guid: f00c90a098d0ec64d91039cba40d9adf, type: 3}
 --- !u!143 &6891992432676877089
 CharacterController:
@@ -767,6 +778,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb1ee245fbc5b7a43937cbf15ba3dd80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &7616143529112912610
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149185690855}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0a4d964c6a3370d468e2fd6059cff3f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 1
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

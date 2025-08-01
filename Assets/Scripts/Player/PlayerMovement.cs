@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private CharacterController controller;
 
+
+    
     [SerializeField]
     private float playerSpeed = 5.0f, playerRunSpeed = 8;
 
@@ -75,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
     public void Walk(Vector3 movementInput, bool runningInput)
     {
         Vector3 movementDirection = GetMovementDirection(movementInput);
+        
 
         float speed = runningInput ? playerRunSpeed : playerSpeed;
 
@@ -157,7 +160,6 @@ public class PlayerMovement : MonoBehaviour
     }
     private void AddJumpForce()
     {
-
         //playerVelocity.y = Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
         if (jumpCooldownTimer <= 0f)
         {
