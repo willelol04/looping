@@ -1510,7 +1510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: 774207385e047e34685de3cfaf8b4497, type: 3}
+    clip: {fileID: 8300000, guid: c32bde5e57e544c4a9b171bb4dded92a, type: 3}
   sfxSounds:
   - name: jump
     clip: {fileID: 8300000, guid: 3dd5df0584a662b489d72e36c4f0c65e, type: 3}
@@ -1715,7 +1715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 520719340260886809, guid: 2d6609e2d4979584face54932af62d07, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1870230597494353328, guid: 2d6609e2d4979584face54932af62d07, type: 3}
       propertyPath: m_Name
@@ -1871,7 +1871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8705352274053433675, guid: 2d6609e2d4979584face54932af62d07, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
