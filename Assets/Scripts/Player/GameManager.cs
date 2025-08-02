@@ -38,6 +38,17 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
             SpawnPlayer();
+
+
+            if (Input.GetKeyDown(KeyCode.Escape) && Cursor.lockState == CursorLockMode.Locked)
+            {
+                Cursor.lockState = CursorLockMode.None; 
+
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape) && Cursor.lockState != CursorLockMode.Locked)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
     }
 
 
