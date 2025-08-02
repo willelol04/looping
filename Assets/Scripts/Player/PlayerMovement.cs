@@ -173,7 +173,6 @@ public class PlayerMovement : MonoBehaviour
     {
         playerVelocity.y += gravityValue * Time.deltaTime;
         playerVelocity.y = Mathf.Clamp(playerVelocity.y, gravityValue, 30f);
-        Debug.Log(playerVelocity.y);
     }
 
 
